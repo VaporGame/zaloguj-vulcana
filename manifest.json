@@ -1,0 +1,27 @@
+{
+    "manifest_version": 3,
+    "name": "zaloguj vulcana",
+    "version": "1.1",
+    "icons": {
+        "48": "icon.png"
+    },
+    "permissions": ["storage"],
+    "action": {
+        "default_popup": "popup.html",
+        "default_title": "Vulcan Auto-Login Settings"
+    },
+    "content_scripts": [
+        {
+            "matches": ["*://eduvulcan.pl/*"],
+            "js": ["content.js"]
+        }
+    ],
+    "browser_specific_settings": {
+        "gecko": {
+            "id": "zaloguj-vulcana@apor_v.pl",
+            "data_collection_permissions": {
+                "required": ["none"]
+            }
+        }
+    }
+}

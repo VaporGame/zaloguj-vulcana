@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        body { width: 220px; font-family: sans-serif; padding: 15px; background: #f9f9f9; }
+        h3 { margin-top: 0; font-size: 16px; color: #333; }
+        input[type="text"], input[type="password"] { 
+        width: 100%; padding: 8px; margin: 5px 0 12px 0; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box;
+        }
+        .toggle-group { display: flex; align-items: center; justify-content: space-between; margin-bottom: 15px; }
+        button { 
+        width: 100%; padding: 10px; background: #c0392b; color: white; border: none; border-radius: 4px; cursor: pointer; font-weight: bold;
+        }
+        button:hover { background: #e74c3c; }
+        .status { font-size: 11px; text-align: center; color: green; margin-top: 8px; }
+    </style>
+</head>
+<body>
+    <h3>Vulcan Login</h3>
+    <input type="text" id="username" placeholder="Email/Login">
+    <input type="password" id="password" placeholder="Hasło">
+    
+    <label for="schoolName">Nazwa szkoły:</label>
+    <input type="text" id="schoolName" placeholder="e.g. ZSEM">
+
+    <div class="toggle-group">
+        <label for="autoSelect">Automatycznie wybieraj szkołe?</label>
+        <input type="checkbox" id="autoSelect">
+    </div>
+
+    <button id="save">Zapisz</button>
+    <div id="status" class="status"></div>
+    <script src="popup.js"></script>
+</body>
+</html>
